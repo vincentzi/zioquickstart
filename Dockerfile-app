@@ -1,0 +1,6 @@
+FROM alpine:3.17.2
+
+COPY out/zioquickstart-executable /opt/app/zioquickstart-executable
+RUN chmod +x /opt/app/zioquickstart-executable
+EXPOSE 8080
+ENTRYPOINT ["/opt/app/zioquickstart-executable"]
