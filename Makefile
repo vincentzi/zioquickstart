@@ -6,7 +6,7 @@ native-image-configs:
 	java -agentlib:native-image-agent=config-output-dir=./configs -jar target/scala-2.13/zioquickstart-assembly-0.1.0-SNAPSHOT.jar
 
 graalvm-native-image-local:
-	docker build --progress=plain --platform linux/amd64 -t graalvm-native-image-local -f Dockerfile-native-image .
+	docker build --progress=plain -t graalvm-native-image-local -f Dockerfile-native-image .
 
 deployment-artifacts:
 	docker build --progress=plain --platform linux/amd64 -t zioquickstart:latest -f Dockerfile-app .
